@@ -1,0 +1,157 @@
+[Sat Aug 10 02:58:04.355039 2019] [php7:error] [pid 8589] [client 127.0.0.1:56994] PHP Fatal error:  Uncaught Error: Class 'mini\\controllers\\Exception' not found in /var/www/mini/controllers/TaskController.php:48\nStack trace:\n#0 [internal function]: mini\\controllers\\TaskController->actionUpdate()\n#1 /var/www/mini/core/Sam.php(119): ReflectionMethod->invokeArgs(Object(mini\\controllers\\TaskController), Array)\n#2 /var/www/mini/core/Sam.php(64): mini\\core\\Sam->handleRequest()\n#3 /var/www/mini/public/index.php(7): mini\\core\\Sam->run()\n#4 {main}\n  thrown in /var/www/mini/controllers/TaskController.php on line 48
+[Sat Aug 10 03:03:10.056532 2019] [php7:error] [pid 10128] [client 127.0.0.1:57026] PHP Fatal error:  Uncaught Error: Call to a member function update() on array in /var/www/mini/controllers/TaskController.php:64\nStack trace:\n#0 [internal function]: mini\\controllers\\TaskController->actionUpdate()\n#1 /var/www/mini/core/Sam.php(119): ReflectionMethod->invokeArgs(Object(mini\\controllers\\TaskController), Array)\n#2 /var/www/mini/core/Sam.php(64): mini\\core\\Sam->handleRequest()\n#3 /var/www/mini/public/index.php(7): mini\\core\\Sam->run()\n#4 {main}\n  thrown in /var/www/mini/controllers/TaskController.php on line 64
+[Sat Aug 10 03:25:37.974184 2019] [php7:notice] [pid 8589] [client 127.0.0.1:57182] PHP Notice:  Undefined property: ReflectionClass::$getProperties in /var/www/mini/models/Task.php on line 138
+[Sat Aug 10 03:25:37.974242 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57182] PHP Warning:  Invalid argument supplied for foreach() in /var/www/mini/models/Task.php on line 138
+[Sat Aug 10 03:26:06.377699 2019] [php7:notice] [pid 8587] [client 127.0.0.1:57188] PHP Notice:  Undefined property: ReflectionClass::$getProperties in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:26:06.377762 2019] [php7:notice] [pid 8587] [client 127.0.0.1:57188] PHP Notice:  Undefined property: ReflectionClass::$getProperties in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:26:06.377776 2019] [php7:warn] [pid 8587] [client 127.0.0.1:57188] PHP Warning:  Invalid argument supplied for foreach() in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:26:20.773973 2019] [php7:notice] [pid 12510] [client 127.0.0.1:57196] PHP Notice:  Undefined property: ReflectionClass::$getProperties in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:26:20.774019 2019] [php7:notice] [pid 12510] [client 127.0.0.1:57196] PHP Notice:  Undefined property: ReflectionClass::$getProperties in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:26:20.774029 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57196] PHP Warning:  Invalid argument supplied for foreach() in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:26:45.933016 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57200] PHP Notice:  Undefined property: ReflectionClass::$getProperties in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:26:47.169181 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57200] PHP Notice:  Undefined property: ReflectionClass::$getProperties in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:26:47.537120 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57200] PHP Notice:  Undefined property: ReflectionClass::$getProperties in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995774 2019] [php7:notice] [pid 8589] [client 127.0.0.1:57230] PHP Notice:  Undefined index: id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995828 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57230] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995844 2019] [php7:notice] [pid 8589] [client 127.0.0.1:57230] PHP Notice:  Undefined index: user_id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995867 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57230] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995877 2019] [php7:notice] [pid 8589] [client 127.0.0.1:57230] PHP Notice:  Undefined index: title in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995901 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57230] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995912 2019] [php7:notice] [pid 8589] [client 127.0.0.1:57230] PHP Notice:  Undefined index: description in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995922 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57230] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995931 2019] [php7:notice] [pid 8589] [client 127.0.0.1:57230] PHP Notice:  Undefined index: creation_date in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995941 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57230] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995950 2019] [php7:notice] [pid 8589] [client 127.0.0.1:57230] PHP Notice:  Undefined index: status in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995960 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57230] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995969 2019] [php7:notice] [pid 8589] [client 127.0.0.1:57230] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:29:23.995979 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57230] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025174 2019] [php7:notice] [pid 8587] [client 127.0.0.1:57244] PHP Notice:  Undefined index: id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025225 2019] [php7:warn] [pid 8587] [client 127.0.0.1:57244] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025240 2019] [php7:notice] [pid 8587] [client 127.0.0.1:57244] PHP Notice:  Undefined index: user_id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025253 2019] [php7:warn] [pid 8587] [client 127.0.0.1:57244] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025264 2019] [php7:notice] [pid 8587] [client 127.0.0.1:57244] PHP Notice:  Undefined index: title in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025275 2019] [php7:warn] [pid 8587] [client 127.0.0.1:57244] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025285 2019] [php7:notice] [pid 8587] [client 127.0.0.1:57244] PHP Notice:  Undefined index: description in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025296 2019] [php7:warn] [pid 8587] [client 127.0.0.1:57244] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025307 2019] [php7:notice] [pid 8587] [client 127.0.0.1:57244] PHP Notice:  Undefined index: creation_date in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025319 2019] [php7:warn] [pid 8587] [client 127.0.0.1:57244] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025329 2019] [php7:notice] [pid 8587] [client 127.0.0.1:57244] PHP Notice:  Undefined index: status in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025340 2019] [php7:warn] [pid 8587] [client 127.0.0.1:57244] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025351 2019] [php7:notice] [pid 8587] [client 127.0.0.1:57244] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:20.025361 2019] [php7:warn] [pid 8587] [client 127.0.0.1:57244] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980830 2019] [php7:notice] [pid 12510] [client 127.0.0.1:57248] PHP Notice:  Undefined index: id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980882 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57248] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980893 2019] [php7:notice] [pid 12510] [client 127.0.0.1:57248] PHP Notice:  Undefined index: user_id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980902 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57248] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980908 2019] [php7:notice] [pid 12510] [client 127.0.0.1:57248] PHP Notice:  Undefined index: title in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980915 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57248] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980922 2019] [php7:notice] [pid 12510] [client 127.0.0.1:57248] PHP Notice:  Undefined index: description in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980929 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57248] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980935 2019] [php7:notice] [pid 12510] [client 127.0.0.1:57248] PHP Notice:  Undefined index: creation_date in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980941 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57248] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980947 2019] [php7:notice] [pid 12510] [client 127.0.0.1:57248] PHP Notice:  Undefined index: status in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980954 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57248] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980960 2019] [php7:notice] [pid 12510] [client 127.0.0.1:57248] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:31:45.980967 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57248] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006507 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57258] PHP Notice:  Undefined index: id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006565 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57258] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006581 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57258] PHP Notice:  Undefined index: user_id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006594 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57258] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006605 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57258] PHP Notice:  Undefined index: title in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006617 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57258] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006628 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57258] PHP Notice:  Undefined index: description in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006639 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57258] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006650 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57258] PHP Notice:  Undefined index: creation_date in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006661 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57258] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006687 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57258] PHP Notice:  Undefined index: status in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006698 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57258] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006708 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57258] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:32:44.006719 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57258] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.813786 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57266] PHP Notice:  Undefined index: id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.813927 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57266] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.813954 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57266] PHP Notice:  Undefined index: user_id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.813974 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57266] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.813988 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57266] PHP Notice:  Undefined index: title in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.814003 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57266] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.814019 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57266] PHP Notice:  Undefined index: description in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.814034 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57266] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.814047 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57266] PHP Notice:  Undefined index: creation_date in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.814066 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57266] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.814081 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57266] PHP Notice:  Undefined index: status in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.814095 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57266] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.814108 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57266] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:02.814121 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57266] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.665954 2019] [php7:notice] [pid 10128] [client 127.0.0.1:57274] PHP Notice:  Undefined index: id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666005 2019] [php7:warn] [pid 10128] [client 127.0.0.1:57274] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666023 2019] [php7:notice] [pid 10128] [client 127.0.0.1:57274] PHP Notice:  Undefined index: user_id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666038 2019] [php7:warn] [pid 10128] [client 127.0.0.1:57274] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666052 2019] [php7:notice] [pid 10128] [client 127.0.0.1:57274] PHP Notice:  Undefined index: title in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666084 2019] [php7:warn] [pid 10128] [client 127.0.0.1:57274] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666097 2019] [php7:notice] [pid 10128] [client 127.0.0.1:57274] PHP Notice:  Undefined index: description in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666110 2019] [php7:warn] [pid 10128] [client 127.0.0.1:57274] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666122 2019] [php7:notice] [pid 10128] [client 127.0.0.1:57274] PHP Notice:  Undefined index: creation_date in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666134 2019] [php7:warn] [pid 10128] [client 127.0.0.1:57274] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666146 2019] [php7:notice] [pid 10128] [client 127.0.0.1:57274] PHP Notice:  Undefined index: status in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666158 2019] [php7:warn] [pid 10128] [client 127.0.0.1:57274] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666169 2019] [php7:notice] [pid 10128] [client 127.0.0.1:57274] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:34:20.666181 2019] [php7:warn] [pid 10128] [client 127.0.0.1:57274] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639691 2019] [php7:notice] [pid 8585] [client 127.0.0.1:57286] PHP Notice:  Undefined index: id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639783 2019] [php7:warn] [pid 8585] [client 127.0.0.1:57286] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639807 2019] [php7:notice] [pid 8585] [client 127.0.0.1:57286] PHP Notice:  Undefined index: user_id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639827 2019] [php7:warn] [pid 8585] [client 127.0.0.1:57286] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639848 2019] [php7:notice] [pid 8585] [client 127.0.0.1:57286] PHP Notice:  Undefined index: title in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639856 2019] [php7:warn] [pid 8585] [client 127.0.0.1:57286] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639863 2019] [php7:notice] [pid 8585] [client 127.0.0.1:57286] PHP Notice:  Undefined index: description in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639870 2019] [php7:warn] [pid 8585] [client 127.0.0.1:57286] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639877 2019] [php7:notice] [pid 8585] [client 127.0.0.1:57286] PHP Notice:  Undefined index: creation_date in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639885 2019] [php7:warn] [pid 8585] [client 127.0.0.1:57286] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639891 2019] [php7:notice] [pid 8585] [client 127.0.0.1:57286] PHP Notice:  Undefined index: status in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639898 2019] [php7:warn] [pid 8585] [client 127.0.0.1:57286] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639905 2019] [php7:notice] [pid 8585] [client 127.0.0.1:57286] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639912 2019] [php7:warn] [pid 8585] [client 127.0.0.1:57286] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:35:40.639943 2019] [php7:notice] [pid 8585] [client 127.0.0.1:57286] PHP Notice:  Undefined index:  in /var/www/mini/models/Task.php on line 112
+[Sat Aug 10 03:35:40.639993 2019] [php7:error] [pid 8585] [client 127.0.0.1:57286] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to mini\\core\\Sam::assignValues() must be of the type array, null given, called in /var/www/mini/models/Task.php on line 112 and defined in /var/www/mini/core/Sam.php:143\nStack trace:\n#0 /var/www/mini/models/Task.php(112): mini\\core\\Sam->assignValues(Object(mini\\models\\Task), NULL)\n#1 /var/www/mini/controllers/TaskController.php(64): mini\\models\\Task->update()\n#2 [internal function]: mini\\controllers\\TaskController->actionUpdate()\n#3 /var/www/mini/core/Sam.php(119): ReflectionMethod->invokeArgs(Object(mini\\controllers\\TaskController), Array)\n#4 /var/www/mini/core/Sam.php(64): mini\\core\\Sam->handleRequest()\n#5 /var/www/mini/public/index.php(7): mini\\core\\Sam->run()\n#6 {main}\n  thrown in /var/www/mini/core/Sam.php on line 143
+[Sat Aug 10 03:36:31.843557 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57296] PHP Notice:  Undefined index: id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843615 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57296] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843633 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57296] PHP Notice:  Undefined index: user_id in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843649 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57296] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843662 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57296] PHP Notice:  Undefined index: title in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843675 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57296] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843687 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57296] PHP Notice:  Undefined index: description in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843711 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57296] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843718 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57296] PHP Notice:  Undefined index: creation_date in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843725 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57296] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843731 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57296] PHP Notice:  Undefined index: status in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843739 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57296] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843745 2019] [php7:notice] [pid 8586] [client 127.0.0.1:57296] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:36:31.843752 2019] [php7:warn] [pid 8586] [client 127.0.0.1:57296] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 139
+[Sat Aug 10 03:40:49.920653 2019] [php7:notice] [pid 10128] [client 127.0.0.1:57320] PHP Notice:  Undefined variable: post in /var/www/mini/models/Task.php on line 138
+[Sat Aug 10 03:40:49.920730 2019] [php7:notice] [pid 10128] [client 127.0.0.1:57320] PHP Notice:  Undefined index:  in /var/www/mini/models/Task.php on line 138
+[Sat Aug 10 03:40:49.920822 2019] [php7:error] [pid 10128] [client 127.0.0.1:57320] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to mini\\core\\Sam::assignValues() must be of the type array, null given, called in /var/www/mini/models/Task.php on line 138 and defined in /var/www/mini/core/Sam.php:143\nStack trace:\n#0 /var/www/mini/models/Task.php(138): mini\\core\\Sam->assignValues(Object(mini\\models\\Task), NULL)\n#1 /var/www/mini/controllers/TaskController.php(64): mini\\models\\Task->getModel('2')\n#2 [internal function]: mini\\controllers\\TaskController->actionUpdate()\n#3 /var/www/mini/core/Sam.php(119): ReflectionMethod->invokeArgs(Object(mini\\controllers\\TaskController), Array)\n#4 /var/www/mini/core/Sam.php(64): mini\\core\\Sam->handleRequest()\n#5 /var/www/mini/public/index.php(7): mini\\core\\Sam->run()\n#6 {main}\n  thrown in /var/www/mini/core/Sam.php on line 143
+[Sat Aug 10 03:41:45.050721 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57332] PHP Notice:  Undefined variable: post in /var/www/mini/models/Task.php on line 138
+[Sat Aug 10 03:41:45.050826 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57332] PHP Notice:  Undefined index:  in /var/www/mini/models/Task.php on line 138
+[Sat Aug 10 03:41:45.050951 2019] [php7:error] [pid 8588] [client 127.0.0.1:57332] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to mini\\core\\Sam::assignValues() must be of the type array, null given, called in /var/www/mini/models/Task.php on line 138 and defined in /var/www/mini/core/Sam.php:143\nStack trace:\n#0 /var/www/mini/models/Task.php(138): mini\\core\\Sam->assignValues(Object(mini\\models\\Task), NULL)\n#1 /var/www/mini/controllers/TaskController.php(64): mini\\models\\Task->getModel('2')\n#2 [internal function]: mini\\controllers\\TaskController->actionUpdate()\n#3 /var/www/mini/core/Sam.php(119): ReflectionMethod->invokeArgs(Object(mini\\controllers\\TaskController), Array)\n#4 /var/www/mini/core/Sam.php(64): mini\\core\\Sam->handleRequest()\n#5 /var/www/mini/public/index.php(7): mini\\core\\Sam->run()\n#6 {main}\n  thrown in /var/www/mini/core/Sam.php on line 143
+[Sat Aug 10 03:42:57.523227 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57346] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:42:57.523329 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57346] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:42:57.523362 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57346] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:42:57.523390 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57346] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:42:57.523425 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57346] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:42:57.523433 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57346] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:42:57.523441 2019] [php7:notice] [pid 12510] [client 127.0.0.1:57346] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:42:57.523448 2019] [php7:warn] [pid 12510] [client 127.0.0.1:57346] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 141
+[Sat Aug 10 03:46:12.501985 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57366] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 135
+[Sat Aug 10 03:46:12.502129 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57366] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 135
+[Sat Aug 10 03:46:12.502158 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57366] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 135
+[Sat Aug 10 03:46:12.502182 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57366] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 135
+[Sat Aug 10 03:46:12.502204 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57366] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 135
+[Sat Aug 10 03:46:12.502278 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57366] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 135
+[Sat Aug 10 03:46:12.502297 2019] [php7:notice] [pid 8588] [client 127.0.0.1:57366] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 135
+[Sat Aug 10 03:46:12.502313 2019] [php7:warn] [pid 8588] [client 127.0.0.1:57366] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 135
+[Sat Aug 10 03:50:22.636253 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57394] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 134
+[Sat Aug 10 03:50:22.636315 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57394] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 134
+[Sat Aug 10 03:50:22.636334 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57394] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 134
+[Sat Aug 10 03:50:22.636348 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57394] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 134
+[Sat Aug 10 03:50:22.636364 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57394] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 134
+[Sat Aug 10 03:50:22.636381 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57394] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 134
+[Sat Aug 10 03:50:22.636394 2019] [php7:notice] [pid 8589] [client 127.0.0.1:57394] PHP Notice:  Undefined index: _data in /var/www/mini/models/Task.php on line 134
+[Sat Aug 10 03:50:22.636411 2019] [php7:warn] [pid 8589] [client 127.0.0.1:57394] PHP Warning:  Creating default object from empty value in /var/www/mini/models/Task.php on line 134

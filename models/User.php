@@ -32,7 +32,7 @@ class User
 
     public function demo($id)
     {
-        return (array_key_exists($id, $this->_data)) ? $this->_data[$id] : [];
+        return (array_key_exists($id, $this->_data)) ? $this->_data[$id] : null;
     }
     
     private static function data()
@@ -90,5 +90,31 @@ class User
         return true;
     }
     
+    public function update()
+    {
+        $post = Sam::$ony->getRequest()->post();
+        $model = Sam::$ony->assignValues($this, $post);
+        $this->_data[$this->id] =[
+            'id' => $this->id,
+            'name' => $this->name,
+            'email' => $this->email
+        ]; //just for simplicity sake since mocking db
+        return [
+            'status' => 'success',
+            'message' => 'new record was added',
+            'current_data' => $model->_data
+        ];
+    }
+
+    public function getModel($id)
+    {
+        $c = new \ReflectionClass($this);
+        $model = Sam::$ony->assignValues($this, $this->_data[$id]);
+        foreach ($c->getProperties() as $key => $value):
+        $field = $this->_data[$id];
+        $model->$value->name = $field[$value->name];
+        endforeach;
+        return $model;
+    }
     
 }

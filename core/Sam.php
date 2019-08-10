@@ -144,7 +144,7 @@ class Sam
     {
         foreach ($properties as $key => $value) {
             if (property_exists($object, $key)) {
-                $object->$key = $value;
+                ($value != null) ? $object->$key = $value  : "";
             }
         }
         return $object;

@@ -36,7 +36,7 @@ class Task
 
     public function demo($id)
     {
-        return (array_key_exists($id, $this->_data)) ? $this->_data[$id] : [];
+        return (array_key_exists($id, $this->_data)) ? $this->_data[$id] : null;
     }
     
     private static function data()
@@ -51,7 +51,7 @@ class Task
                 'status' => 1
             ],
             2 => [
-                'id' => 1,
+                'id' => 2,
                 'user_id' => 3,
                 'title' => 'second mock data',
                 'description' => 'taken from array',
@@ -59,7 +59,7 @@ class Task
                 'status' => 1
             ],
             3 => [
-                'id' => 1,
+                'id' => 3,
                 'user_id' => 1,
                 'title' => 'another mock data',
                 'description' => 'not persistant yet',
@@ -91,7 +91,7 @@ class Task
         $this->id = count($this->_data) + 1;
         array_push($this->_data, [
             'id' => $this->id,
-            'user_id' => 1,
+            'user_id' => $this->user_id,
             'title' => $this->title,
             'description' => $this->description,
             'creation_date' => $this->creation_date,
@@ -104,6 +104,36 @@ class Task
     {
         unset($this->_data[$this->id]);
         return true;
+    }
+
+    public function update()
+    {
+        $post = Sam::$ony->getRequest()->post();
+        $model = Sam::$ony->assignValues($this, $post);
+        $this->_data[$this->id] =[
+            'id' => $this->id,
+            'user_id' => $this->user_id,
+            'title' => $this->title,
+            'description' => $this->description,
+            'creation_date' => $this->creation_date,
+            'status' => $this->status
+        ]; //just for simplicity sake since mocking db
+        return [
+            'status' => 'success',
+            'message' => 'new record was added',
+            'current_data' => $model->_data
+        ];
+    }
+
+    public function getModel($id)
+    {
+        $c = new \ReflectionClass($this);
+        $model = Sam::$ony->assignValues($this, $this->_data[$id]);
+        foreach ($c->getProperties() as $key => $value):
+        $field = $this->_data[$id];
+        $model->$value->name = $field[$value->name];
+        endforeach;
+        return $model;
     }
     
     

@@ -37,18 +37,54 @@ class TaskController extends \mini\core\Controller
     public function actionCreate()
     {
         if (!Sam::$ony->getRequest()->isPost) {
-            throw new Exception('This method only accept post requests', 400);
+            return [
+                'status' => 'error',
+                'message' => 'method not supported'
+            ];
         }
         return Task::addNew();
     }
-    
-    public function actionDelete($id)
+
+    public function actionUpdate()
     {
         if (!Sam::$ony->getRequest()->isPost) {
-            throw new Exception('This method only accept post requests', 400);
+            return [
+                'status' => 'error',
+                'message' => 'method not supported'
+            ];
         }
-        $model = (new User())->demo($id);
-        if (!$model) {
+        $id = Sam::$ony->getRequest()->post('id');
+        $model = new Task();
+        if (!$model->demo($id)) {
+            return [
+                'status' => 'error',
+                'message' => $id. ' not on file'
+            ];
+        }
+        if (!$model->getModel($id)->update()) {
+            return [
+                'status' => 'error',
+                'message' => $id. ' could not be updated.'
+            ];
+        }
+        return [
+            'status' => 'success',
+            'message' => $id.' was updated successfully',
+            'current_data' => $model->_data
+        ];
+    }
+    
+    public function actionDelete()
+    {
+        if (!Sam::$ony->getRequest()->isPost) {
+            return [
+                'status' => 'error',
+                'message' => 'method not supported'
+            ];
+        }
+        $id = Sam::$ony->getRequest()->post('id');
+        $model = new User();
+        if (!$model->demo($id)) {
             return [
                 'status' => 'error',
                 'message' => $id. ' not on file'
@@ -62,7 +98,8 @@ class TaskController extends \mini\core\Controller
         }
         return [
             'status' => 'success',
-            'message' => $id.' was deleted successfully'
+            'message' => $id.' was deleted successfully',
+            'current_data' => $model->_data
         ];
     }
 }

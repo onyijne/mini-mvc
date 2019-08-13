@@ -11,6 +11,7 @@ use mini\core\Response;
 use mini\core\db\Sqlite;
 use mini\core\db\Mysql;
 
+defined('SAM_DEV') or define('SAM_DEV', 'prod');
 defined('BASE_PATH') or define('BASE_PATH', dirname(__DIR__));
 defined('CONTROLLERS_PATH') or define('CONTROLLERS_PATH', dirname(__DIR__).DIRECTORY_SEPARATOR.'controllers');
 defined('MODELS_PATH') or define('MODELS_PATH', dirname(__DIR__).DIRECTORY_SEPARATOR.'models');
@@ -50,7 +51,7 @@ class Sam
 
     public function __construct($config) 
     {
-        if (SAM_DEV) {
+        if (SAM_DEV == 'dev') {
             ini_set('display_errors', 1);
         }
         $this->configs = array_merge($this->defaults(), $config);

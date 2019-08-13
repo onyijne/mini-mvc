@@ -35,14 +35,14 @@ class Request
     
     private $variable_name;
     
-    private $uri;
+    public $paths = [];
     
-    private $paths;
+    public $query;
 
     public function __construct(array $config) 
     {
         $this->setRoutes($config);
-        $this->setsMethod();
+        $this->setMethod();
     }
 
     public function __destruct() {
@@ -50,64 +50,68 @@ class Request
         $this->variable_name = '';
         $this->isPost = false;
         $this->isGet = false;
-        $this->uri = [];
+        $this->paths = [];
+    }
+    
+    public function __set($name, $value) {
+        $this->$name = $value;
+    }
+    
+    public function __get($name) {
+        return $this->$name;
     }
     
     private function setUri($config)
     {
         $array = str_replace(HOMEURL, '', parse_url(filter_input(INPUT_SERVER, 'REQUEST_URI')));
-        $this->paths = explode('/', trim($array['path'], '/'));              
-        if (count($this->paths) == 1) {
-            if ($this->paths[0] == '') { //no controller specified
-                $this->uri = explode('/', $config['defaultRoute']);
-                $this->setController($config);
-            } else { 
-                $this->uri[0] = $this->paths[0];
-                $this->setController($config);
-                $this->uri[1] = $this->getController()->defaultAction;
-            }       
-        } else {
-            $this->uri[0] = $this->paths[0];
-            $this->uri[1] = $this->paths[1];
-            $this->setController($config);
-        }
-        
+        $this->paths = explode('/', trim($array['path'], '/')); 
+        $this->query = (array_key_exists('query', $array)) ? $array['query'] : '';       
         if ($config["url"]["pretty"] == false) {
-            $part = explode('&', $array['query']);
-            $this->uri[0] = $this->paths[0] = $part['r'];
-            $this->uri[1] = $this->paths[1] = $part['a'];
-            $this->uri[2] = array_slice($part, 2);                        
+            $parts = explode('&', $this->query);
+            $this->paths[0] = $parts['r'];
+            $this->setController($config);
+            $this->paths[1] = ($parts['a'] && !$this->paths[1]) ? : $this->getController()->defaultAction;
+            $this->query  = implode('&', array_slice($parts, 2));                        
         } else {
-            $this->uri[2] = (array_key_exists('query', $array)) ? $array['query'] : [];
+            if (count($this->paths) == 1) {
+                if ($this->paths[0] == '') { //no controller specified
+                    $this->paths = explode('/', $config['defaultRoute']);
+                    $this->setController($config);
+                } else { //only controller was provided
+                    $this->setController($config);
+                    $this->paths[1] = (array_key_exists(1, $this->paths))? $this->paths[1] : $this->getController()->defaultAction;
+                }       
+            } else {//both controller and action were supplied
+                $this->setController($config);
+            }
         }
+        return $this;
     }
 
     private function setRoutes($config)
     {
         $this->setUri($config);
         $this->setAction($config);
-        if (array_key_exists(2, $this->uri)) {
-            $params = $this->uri[2];
-            if (strpos($params, '&') !== FALSE) {
-                $params = explode('&', $params);
+        if ($this->query) {
+            if (strpos($this->query, '&') !== FALSE) {
+                $params = explode('&', $this->query);
             } else {
-                $params = [$params];
+                $params = [$this->query];
             }
             foreach ($params as $value) {
                 $param = explode('=', $value);
-                $this->params[$param[0]] = $param[1];
-            }
-            
+               (array_key_exists(0, $param)) ? $this->params[$param[0]] = $param[1] : "";
+            }           
         }
     }
     
     private function setController($config)
     {
-       $name =  $this->uri[0];
+       $name =  $this->paths[0];
        $controller = 'mini\controllers\\'.ucfirst($name).'Controller';
        if (!class_exists($controller)){
-           $this->uri = explode('/', $config['error']);
-           $controller = 'mini\controllers\\'.ucfirst($this->uri[0]).'Controller';
+           $this->paths = explode('/', $config['error']);
+           $controller = 'mini\controllers\\'.ucfirst($this->paths[0]).'Controller';
        } 
        $class = new \ReflectionClass($controller);
        $this->controller = $class->newInstanceWithoutConstructor();
@@ -120,13 +124,12 @@ class Request
     
     private function setAction($config)
     {
-        $this->action =  $this->uri[1];
+        $this->action =  $this->paths[1];
         $class = new \ReflectionClass($this->controller);
         $this->controller = $class->newInstanceWithoutConstructor();
         if (!$this->controller->hasMethod('action'.ucwords($this->action))) {
-            $this->uri = explode('/', $config['error']);
+            $this->paths = explode('/', $config['error']);
             $this->setController($config);
-            $this->action = 'error';
         }
     }
 
@@ -135,13 +138,22 @@ class Request
         return $this->action;
     }
     
+    /**
+     * 
+     * @return array
+     */
     public function getParams()
     {
         return $this->params;
     }
+    
+    public function getQuery()
+    {
+        return $this->query;
+    }
 
     
-    private function setsMethod()
+    private function setMethod()
     {
         switch (filter_input(INPUT_SERVER, 'REQUEST_METHOD')) {
             case 'GET':

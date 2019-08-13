@@ -15,9 +15,11 @@ use mini\core\Response;
  *
  * @author samuel
  */
-class AppController extends \mini\core\Controller
+class AppController extends \mini\core\web\Controller
 {
 
+    public $defaultAction = 'home';
+    
     public function actionHome()
     {
         return $this->render('home',[

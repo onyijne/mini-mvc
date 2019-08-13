@@ -5,8 +5,8 @@
  * (c) 2019. Samuel Onyijne, <samuel@sajflow.com>  * 
  */
 
-namespace mini\core;
-use mini\core\Sam;
+namespace mini\core\web;
+
 /**
  * The base Controller
  *

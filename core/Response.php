@@ -26,12 +26,20 @@ class Response
         
     }
     
+    public function __set($name, $value) {
+        $this->$name = $value;
+    }
+    
+    public function __get($name) {
+        return $this->$name;
+    }
+    
     public function setData($data)
     {
         $this->data = $data;
     }
 
-        public function send()
+    public function send()
     {
         $this->setHeader("Content-Type", $this->format);
         if ($this->format == 'text/html') {
